@@ -1,4 +1,4 @@
-export async function getCities() {
+export async function getCities(lt, ln) {
   const response = await fetch("http://localhost:5000/weather", {
     method: "POST",
     headers: {
@@ -6,8 +6,8 @@ export async function getCities() {
       Accept: "application/json",
     },
     body: JSON.stringify({
-      latitude: 0,
-      longitude: 0,
+      latitude: lt,
+      longitude: ln,
     }),
   });
 

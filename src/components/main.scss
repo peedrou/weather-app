@@ -1,0 +1,43 @@
+.super-wrapper {
+  display: flex;
+  .main-wrapper {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: fit-content;
+    padding: 20px;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      z-index: -1;
+      background: #454545;
+      opacity: 70%;
+      height: 100%;
+      width: 100%;
+      border-radius: 47px;
+    }
+    .body {
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+      .general-information {
+        display: flex;
+        gap: 50px;
+        color: white;
+
+        .location {
+          padding-left: 200px;
+        }
+      }
+      .details-wrapper {
+        display: flex;
+        gap: 100px;
+        color: white;
+      }
+    }
+  }
+}

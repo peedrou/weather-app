@@ -1,6 +1,5 @@
 import express from "express";
 import cors from "cors";
-import dotenv from "dotenv";
 
 const WEATHERBIT_API_KEY = process.env.WEATHERBIT_API_KEY;
 const app = express();
@@ -11,7 +10,7 @@ app.use(cors({ origin: "*" }));
 
 app.post("/weather", (req, res) => {
   console.log(req.body);
-  res.send(["Lisbon", "London"]);
+  res.send(req.body);
 });
 
 app.listen(5000, () => {

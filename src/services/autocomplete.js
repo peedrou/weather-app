@@ -1,11 +1,9 @@
-import { useEffect, useState } from "react";
-import { getCities } from "./weather.service";
+import { useState } from "react";
 import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 import { geocodeByAddress, getLatLng } from "react-google-places-autocomplete";
+import { getCities } from "./weather.service";
 
 const AutoComplete = () => {
-  //getCities();
-
   const [value, setValue] = useState(null);
 
   const handleClick = async () => {
@@ -13,9 +11,7 @@ const AutoComplete = () => {
     const valueAsJson = JSON.stringify(value);
     await geocodeByAddress(valueAsJson)
       .then((results) => getLatLng(results[0]))
-      .then(({ lat, lng }) =>
-        console.log("Successfully got latitude and longitude", { lat, lng })
-      );
+      .then(({ lat, lng }) => getCities(lat, lng));
   };
 
   return (
@@ -31,7 +27,7 @@ const AutoComplete = () => {
         id="search-button"
         onClick={handleClick}
       >
-        Cum
+        Search Current weather
       </button>
     </div>
   );
