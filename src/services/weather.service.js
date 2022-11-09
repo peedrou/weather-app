@@ -1,3 +1,5 @@
+import setWeatherData from "./setweatherdata";
+
 export async function getCities(lt, ln) {
   const response = await fetch("http://localhost:5000/weather", {
     method: "POST",
@@ -13,4 +15,5 @@ export async function getCities(lt, ln) {
 
   const data = await response.json();
   console.log(data);
+  setWeatherData(data);
 }
