@@ -18,12 +18,36 @@
       content: "";
       position: absolute;
       display: block;
-      z-index: -1;
+      z-index: -2;
       background: #454545;
       opacity: 70%;
       height: 100%;
       width: 100%;
       border-radius: 47px;
+    }
+    .location-container {
+      .input-wrapper {
+        position: relative;
+        ::before {
+          content: "";
+          position: absolute;
+          display: block;
+          background: #fadedc;
+          z-index: -1;
+          opacity: 70%;
+          height: 100%;
+          width: 100%;
+          border-radius: 47px;
+          transform: translate(-8px, -12.5px);
+        }
+        .search-button {
+          font-size: 16px;
+          margin-top: 20px;
+          border: transparent;
+          background: transparent;
+          cursor: pointer;
+        }
+      }
     }
     .body {
       display: flex;
@@ -31,17 +55,45 @@
       gap: 100px;
       .general-information {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40px;
+        flex-direction: column;
+        font-size: 40px;
         gap: 50px;
         color: white;
 
-        .location {
-          padding-left: 200px;
+        .status.status {
+          font-size: 25px;
         }
       }
       .details-wrapper {
         display: flex;
         gap: 100px;
-        color: white;
+        color: #fadedc;
+        .dv {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .detail {
+            font-weight: bold;
+            font-size: 20px;
+            border-bottom: 2px solid #fadedc;
+            margin-bottom: 10px;
+          }
+          .value {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+            height: 50px;
+            width: 50px;
+            padding: 5px;
+            border: 3px solid #fadedc;
+            border-radius: 50%;
+          }
+        }
       }
     }
   }

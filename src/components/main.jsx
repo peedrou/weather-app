@@ -9,10 +9,10 @@ function Main() {
       <div className="main-wrapper">
         <div className="body">
           <div className="general-information">
-            <div className="status" id="data-location">
+            <div className="location" id="data-location">
               Location
             </div>
-            <div className="location">Weather</div>
+            <div className="status">Weather</div>
           </div>
           <div className="details-wrapper">
             <div className="dv">

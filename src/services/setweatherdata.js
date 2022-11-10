@@ -12,6 +12,14 @@ function setWeatherData(data) {
   temperatureElement.textContent = String(data.data[0].app_temp);
   rainElement.textContent = String(data.data[0].precip);
   windElement.textContent = String(data.data[0].wind_spd);
+
+  const weatherinfo = [
+    data.data[0].city_name,
+    String(data.data[0].app_temp),
+    String(data.data[0].precip),
+    String(data.data[0].wind_spd),
+  ];
+  return weatherinfo;
 }
 
 export default setWeatherData;

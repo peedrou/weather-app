@@ -22,13 +22,15 @@ const AutoComplete = () => {
           onChange: setValue,
         }}
       />
-      <button
-        className="search-button"
-        id="search-button"
-        onClick={handleClick}
-      >
-        Search Current weather
-      </button>
+      <div className="input-wrapper">
+        <button
+          className="search-button"
+          id="search-button"
+          onClick={handleClick}
+        >
+          Search Current weather
+        </button>
+      </div>
     </div>
   );
 };
