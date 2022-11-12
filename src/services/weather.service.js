@@ -13,7 +13,5 @@ export async function getCities(lt, ln) {
     }),
   });
 
-  const data = await response.json();
-  console.log(data);
-  setWeatherData(data);
+  return await response.json();
 }

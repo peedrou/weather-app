@@ -1,4 +1,5 @@
 function setWeatherData(data) {
+  console.log("weather data", data);
   const locationElement = document.getElementById("data-location");
   const windElement = document.getElementById("data-wind");
   const temperatureElement = document.getElementById("data-temperature");

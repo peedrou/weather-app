@@ -5,8 +5,10 @@ import cloud_rain from "../images/cloud_rain.png";
 import "./getimage.scss";
 
 function GetImage() {
-  const temperatureElement = document.getElementById("data-temperature");
-  const rainElement = document.getElementById("data-rain");
+  const temperatureElement =
+    document.getElementById("data-temperature").textContent;
+  const rainElement = document.getElementById("data-rain").textContent;
+
   let source;
 
   if (parseInt(temperatureElement) > 30) {
@@ -17,7 +19,6 @@ function GetImage() {
     source = cloud;
   } else {
     source = cloud_rain;
-    console.log(parseInt(temperatureElement), parseInt(rainElement));
   }
   return <img className="weather-image" src={source}></img>;
 }

@@ -27,25 +27,20 @@
     }
     .location-container {
       .input-wrapper {
-        position: relative;
-        ::before {
-          content: "";
-          position: absolute;
-          display: block;
-          background: #fadedc;
-          z-index: -1;
-          opacity: 70%;
-          height: 100%;
-          width: 100%;
-          border-radius: 47px;
-          transform: translate(-8px, -12.5px);
-        }
         .search-button {
           font-size: 16px;
           margin-top: 20px;
-          border: transparent;
+          border: none;
           background: transparent;
           cursor: pointer;
+          background-color: #fadedc94;
+          padding: 6px 12px;
+          border-radius: 4px;
+          transition: all ease 0.2s;
+
+          &:hover {
+            background-color: #fadedce1;
+          }
         }
       }
     }
@@ -82,7 +77,7 @@
             border-bottom: 2px solid #fadedc;
             margin-bottom: 10px;
           }
-          .value {
+          .valu {
             display: flex;
             justify-content: center;
             align-items: center;
