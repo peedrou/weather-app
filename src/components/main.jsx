@@ -29,12 +29,6 @@ function Main() {
   const [temperatureText, setTemperatureText] = useState("None");
   const [rainText, setRainText] = useState("None");
 
-  function UntilImageLoads() {
-    window.addEventListener("load", function () {
-      <div></div>;
-    });
-  }
-
   return (
     <div className="super-wrapper">
       <div className="main-wrapper">
@@ -70,14 +64,13 @@ function Main() {
           <AutoComplete
             onDataLoad={(data) => {
               setLocationText(data.location);
-              setWindText(data.wind);
+              setWindText(data.wind.toFixed(2));
               setTemperatureText(data.temperature);
               setRainText(data.rain);
             }}
           />
         </div>
       </div>{" "}
-      <UntilImageLoads />
       {(temperatureText != "None" || rainText != "None") && (
         <img
           className="weather-image"
